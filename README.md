@@ -4,12 +4,12 @@ This project aims to accurately classify malicious user in a specific category (
 
 ## Steps:
 
-1) Gather historical data (Labeled). <br />
-2) Define malicious user and determine the validity of the standard. <br />
-3a) Exploratory data analysis using the existing data, including any need for feature engineering. <br />
-3b) Train/Test set using GNN and other classification algorithm.
-4) Classify newly scrape data.
-5) Build an interactive dashboard in the resulting data.
+1) Gather historical data (Labeled).
+2) Define malicious user and determine the validity of the standard.
+3) Exploratory data analysis using the existing data, including any need for feature engineering.
+4) Train/Test set using GNN and other classification algorithm.
+5) Classify newly scrape data.
+6) Build an interactive dashboard in the resulting data.
 
 ## Potential Problems:
 
