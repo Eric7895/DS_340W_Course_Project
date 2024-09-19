@@ -11,6 +11,6 @@ This project aims to accurately classify malicious user in a specific category (
 4) Classify newly scrape data.
 5) Build an interactive dashboard in the resulting data.
 
-## Potenial Problems:
+## Potential Problems:
 
 - We need to determine the validity of our classification result. Which can be achieve by analyze variable importance, and create potential criterions. Criterions can be created automatically using a decision tree.
