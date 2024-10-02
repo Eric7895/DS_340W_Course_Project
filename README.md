@@ -1,6 +1,6 @@
 # DS_340W_Course_Project
 
-This project aims to accurately classify malicious user in a specific category (By tag) on a social media platform through graph neural network (and possibly sentiment analysis) and presents data in a meaningful way. 
+This project aims to accurately classify malicious user in a specific category (By tag) on a social media platform through graph neural network (possibly sentiment analysis) and presents data in a meaningful way. 
 
 ## Steps:
 
