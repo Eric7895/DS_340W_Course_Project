@@ -1,0 +1,12 @@
+- Citations/References used in the study. In LaTex format 
+
+- @misc{https://doi.org/10.48550/arxiv.2206.04564,
+  doi = {10.48550/ARXIV.2206.04564},
+  url = {https://arxiv.org/abs/2206.04564},
+  author = {Feng, Shangbin and Tan, Zhaoxuan and Wan, Herun and Wang, Ningnan and Chen, Zilong and Zhang, Binchi and Zheng, Qinghua and Zhang, Wenqian and Lei, Zhenyu and Yang, Shujie and Feng, Xinshun and Zhang, Qingyue and Wang, Hongrui and Liu, Yuhan and Bai, Yuyang and Wang, Heng and Cai, Zijian and Wang, Yanbo and Zheng, Lijing and Ma, Zihan and Li, Jundong and Luo, Minnan},
+  keywords = {Social and Information Networks (cs.SI), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {TwiBot-22: Towards Graph-Based Twitter Bot Detection},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
