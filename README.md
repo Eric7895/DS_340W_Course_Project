@@ -15,9 +15,10 @@ This project aims to accurately classify malicious user in a specific category (
 
 - We need to determine the validity of our classification result. Which can be achieve by analyze variable importance, and create potential criterions. Criterions can be created automatically using a decision tree.
 
-## Path on Bridge2
+## Path on Bridge2 (And some instruction)
 
 - cd $Project/ocean/projects/cis240116p/username
 - module load anaconda3
 - conda activate env (make sure env is created)
 - sbatch batch
+- squeue -u user_name
