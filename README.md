@@ -18,3 +18,6 @@ This project aims to accurately classify malicious user in a specific category (
 ## Path on Bridge2
 
 - cd $Project/ocean/projects/cis240116p/username
+- module load anaconda3
+- conda activate env (make sure env is created)
+- sbatch batch
