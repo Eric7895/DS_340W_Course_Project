@@ -11,10 +11,6 @@ This project aims to accurately classify malicious user in a specific category (
 5) Classify newly scrape data.
 6) Build an interactive dashboard in the resulting data.
 
-## Potential Problems:
-
-- We need to determine the validity of our classification result. Which can be achieve by analyze variable importance, and create potential criterions. Criterions can be created automatically using a decision tree.
-
 ## Path on Bridge2 (And some instruction)
 
 - cd $Project/ocean/projects/cis240116p/username
