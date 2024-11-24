@@ -16,5 +16,5 @@ This project aims to accurately classify malicious user in a specific category (
 - cd $Project/ocean/projects/cis240116p/username
 - module load anaconda3
 - conda activate env (make sure env is created)
-- sbatch batch
+- sbatch batch.job
 - squeue -u user_name
