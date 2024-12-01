@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier
-from sklearn.svm import SVC
+from sklearn import svm
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import roc_auc_score, precision_recall_curve
@@ -19,34 +19,40 @@ from sklearn.metrics import roc_auc_score, precision_recall_curve
 features_path = 'adjusted_users.csv'
 edges_path = 'edge.csv'
 
-features = pd.read_csv(features_path).values
+numeric_columns = [
+    "follower_count", "following_count", "tweet_count", "listed_count",
+    "year_created", "description_True", "description_False",
+    "entities_True", "entities_False", "location_True", "location_False",
+    "protected_True", "protected_False", "url_True", "url_False",
+    "verified_True", "verified_False", "withheld_True", "withheld_False",
+    "bot_True", "bot_False"
+    ]
+
+users = pd.read_csv(features_path, low_memory=False)
 edges = pd.read_csv(edges_path)
 
+features = users[numeric_columns]
 true_labels = np.random.choice([0, 1], size=features.shape[0], p=[0.7, 0.3])
 
 gcn_predictions = np.random.rand(features.shape[0])
-
-features.shape
-
-edges.shape
 
 scaler = StandardScaler()
 features_scaled = scaler.fit_transform(features)
 
 # Random Forest Classifier
-rfc = RandomForestClassifier(random_state=42)
+rfc = RandomForestClassifier(max_depth=15,n_estimators=156,random_state=42, n_jobs=-1)
 rfc.fit(features_scaled, true_labels)
 rfc_predictions = rfc.predict_proba(features_scaled)[:, 1]
 
 # AdaBoost Classifier
-ada = AdaBoostClassifier(random_state=42)
+ada = AdaBoostClassifier(random_state=42, algorithm='SAMME', learning_rate=0.97, n_estimators=5)
 ada.fit(features_scaled, true_labels)
 ada_predictions = ada.predict_proba(features_scaled)[:, 1]
 
 # Support Vector Machine (SVM) with balanced class weights
-svm = SVC(probability=True, random_state=42, class_weight="balanced")
-svm.fit(features_scaled, true_labels)
-svm_predictions = svm.predict_proba(features_scaled)[:, 1]
+SVM = svm.LinearSVC(random_state=42)
+SVM.fit(features_scaled, true_labels)
+svm_predictions = SVM._predict_proba_lr(features_scaled)[:, 1]
 
 # K-Nearest Neighbors (KNN)
 knn = KNeighborsClassifier()
